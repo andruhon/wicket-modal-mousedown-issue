@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id "org.akhikhl.gretty" version "2.0.0"
+}
+
+group 'pro.kondratev.wicket-modal-demo'
+version '0.1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+dependencies {
+    compile group: 'org.akhikhl.gretty', name: 'gretty-runner-jetty', version: '2.0.0'
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.12.v20180830'
+    compile group: 'org.apache.wicket', name: 'wicket', version: '8.0.0', ext: 'pom'
+    compile group: 'org.apache.wicket', name: 'wicket-extensions', version: '8.0.0'
+    compile group: 'org.wicketstuff', name: 'wicketstuff-select2', version: '8.0.0'
+    compile group: 'org.jetbrains', name: 'annotations', version: '13.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+gretty {
+    httpPort = 8888
+    contextPath = "/"
+    classPath = ["src/main"]
+}
