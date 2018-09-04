@@ -1,5 +1,5 @@
 ### How to reproduce the issue
-* Start the application with `gradle appRun`;
+* Start the application with `gradle appRun` or `.\gradlew.bat appRun`;
 * Open the application in the browser;
 * Open a modal window by clicking on the "Open the window!" link;
 * Open one of Select2 Select or MultiSelect;
