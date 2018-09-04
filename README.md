@@ -1,4 +1,4 @@
-###How to reproduce the issue
+### How to reproduce the issue
 * Start the application with `gradle appRun`;
 * Open the application in the browser;
 * Open a modal window by clicking on the "Open the window!" link;
